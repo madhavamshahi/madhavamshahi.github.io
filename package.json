@@ -1,11 +1,11 @@
 {
   "name": "v1",
-  "description": "Personal Website V1",
+  "description": "Personal Website",
   "version": "1.0.0",
-  "author": "Madhavam Shahi <MadhavamShahiita.namdeo2000@gmail.com>",
+  "author": "Madhavam",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MadhavamShahiitanamdeo/MadhavamShahiitanamdeo.github.io"
+    "url": "https://github.com/madhavamshahi/madhavamshahi.github.io"
   },
   "keywords": [
     "gatsby"
