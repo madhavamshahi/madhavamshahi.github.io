@@ -167,10 +167,10 @@ export const projects: Project[] = [
     year: "2025",
     blurb: "An overlay for calls and lectures.",
     detail:
-      "Live transcription, notes, and AI help on top of whatever app you're already in, so you don't have to switch windows. AltOps grew out of this.",
+      "Live transcription, notes, and AI help on top of whatever app you're already in, so you don't have to switch windows. I grew it to over 2,700 users. AltOps grew out of this.",
     href: "https://www.fasterflow.co/",
     linkLabel: "fasterflow.co",
-    tags: ["Desktop overlay", "Realtime transcription"],
+    tags: ["Desktop overlay", "Realtime transcription", "2,700+ users"],
     accent: "gold",
   },
   {
