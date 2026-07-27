@@ -9,6 +9,7 @@ const SECTIONS = [
   { id: "altops", label: "AltOps" },
   { id: "work", label: "Work" },
   { id: "built", label: "Built" },
+  { id: "writing", label: "Writing" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];

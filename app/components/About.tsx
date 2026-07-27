@@ -8,7 +8,7 @@ export function About() {
   return (
     <section id="about" className="relative py-20 sm:py-24">
       <div className="mx-auto max-w-[80rem] px-5 sm:px-8">
-        <SectionLabel index="03" title="About" />
+        <SectionLabel index="04" title="About" />
 
         <div className="mt-7 grid gap-8 md:grid-cols-12">
           <div className="md:col-span-7">

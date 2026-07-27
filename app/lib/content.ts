@@ -208,6 +208,59 @@ export const projects: Project[] = [
   },
 ];
 
+/* ─────────────────────────── Writing ─────────────────────────── */
+
+export type Publication = {
+  title: string;
+  outlet: string;
+  date: string;
+  blurb: string;
+  href: string;
+};
+
+export const publications: Publication[] = [
+  {
+    title: "Build responsive user interfaces with Flutter",
+    outlet: "GeeksforGeeks",
+    date: "Sep 21, 2021",
+    blurb:
+      "What responsive design actually means on mobile, and how to lay out a Flutter UI that holds up across screen sizes.",
+    href: "https://www.geeksforgeeks.org/flutter/build-responsive-ui-with-flutter/",
+  },
+  {
+    title: "State management with Riverpod",
+    outlet: "GeeksforGeeks",
+    date: "Sep 7, 2021",
+    blurb:
+      "Everything you need to get started managing state in Flutter with Riverpod.",
+    href: "https://www.geeksforgeeks.org/flutter/flutter-introduction-to-state-management-using-riverpod/",
+  },
+  {
+    title: "Streams in Dart",
+    outlet: "Medium",
+    date: "Aug 1, 2021",
+    blurb:
+      "Asynchronous programming in Dart using streams — what they are and when you'd reach for one.",
+    href: "https://madhavam.medium.com/streams-in-dart-dart-asynchronous-programming-b1aa8cf72887",
+  },
+  {
+    title: "Asynchronous programming in Dart",
+    outlet: "Medium",
+    date: "Jul 29, 2021",
+    blurb:
+      "How asynchronous programming works, and how to write it in Dart, for people seeing it for the first time.",
+    href: "https://madhavam.medium.com/asynchronous-programming-with-dart-asynchronous-programming-for-beginners-9e9d0baed524",
+  },
+  {
+    title: "Interfaces in programming",
+    outlet: "Medium",
+    date: "Jul 27, 2021",
+    blurb:
+      "An introduction to interfaces for anyone just getting into object-oriented programming.",
+    href: "https://madhavam.medium.com/interfaces-in-programming-oops-for-beginners-b60c542b7ede",
+  },
+];
+
 /* ─────────────────────────── Everything else ─────────────────────────── */
 
 export type Award = { title: string; detail: string };

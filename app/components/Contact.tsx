@@ -27,7 +27,7 @@ export function Contact() {
 
         <div className="relative mx-auto max-w-[80rem] px-5 pb-12 pt-20 sm:px-8 sm:pt-24">
           <Reveal>
-            <span className="kicker text-cream/30">04 — Contact</span>
+            <span className="kicker text-cream/30">05 — Contact</span>
           </Reveal>
 
           <MaskLines
