@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://madhavamshahi.github.io/sitemap-index.xml
-Host: https://madhavamshahi.github.io

@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+
+  /* Warm bronze base — from the AltOps product palette */
+  --color-cream: #f3efed;
+  --color-cream-2: #ece9e8;
+  --color-paper: #fbf9f9;
+  --color-ink: #211e1d;
+  --color-ink-2: #2d2a2a;
+  --color-bronze-100: #f1efee;
+  --color-bronze-200: #e0dad9;
+  --color-bronze-300: #d1c9c7;
+  --color-bronze-400: #988d8b;
+  --color-bronze-500: #6a6362;
+  --color-bronze-600: #4d4645;
+  --color-bronze-700: #353030;
+  --color-bronze-800: #251f1e;
+
+  /* Signature accents */
+  --color-ember: #e5484d;
+  --color-amber: #e8893a;
+  --color-gold: #d9a441;
+  --color-moss: #4daf29;
+
+  --shadow-soft: 0 1px 2px rgba(20, 15, 15, 0.04), 0 8px 24px rgba(20, 15, 15, 0.06);
+  --shadow-lift: 0 2px 4px rgba(20, 15, 15, 0.05), 0 18px 50px rgba(20, 15, 15, 0.12);
+}
+
+* {
+  border-color: var(--color-bronze-200);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  /* Paper grain is baked into the background image rather than painted by a
+     fixed, blend-mode overlay — the overlay recomposited on every scroll
+     frame, which is what made scrolling feel heavy. */
+  background-color: var(--color-cream);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.1'/%3E%3C/svg%3E");
+  color: var(--color-ink);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: #fff;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ── Type ──────────────────────────────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-pp-formula), "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* 1.06, not the 0.96 the AltOps hero uses — tighter leading clipped
+     ascenders and descenders inside the reveal masks at these sizes. */
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-ember), var(--color-amber) 55%, var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.kicker {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/**
+ * Mask wrapper for line reveals. The negative margin cancels the padding, so
+ * the extra room for ascenders and descenders lives inside the clip box
+ * without changing where the line sits.
+ */
+.mask-line {
+  display: block;
+  overflow: hidden;
+  padding-block: 0.14em;
+  margin-block: -0.14em;
+}
+
+/* ── Surfaces ──────────────────────────────────────────────────── */
+
+.dotgrid {
+  background-image: radial-gradient(rgba(33, 30, 29, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.dotgrid-dark {
+  background-image: radial-gradient(rgba(243, 239, 237, 0.1) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.link-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--color-bronze-300);
+  text-underline-offset: 4px;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+.link-underline:hover {
+  color: var(--color-amber);
+  text-decoration-color: var(--color-amber);
+}
+
+/* ── Motion safety ─────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
