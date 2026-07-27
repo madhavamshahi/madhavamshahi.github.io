@@ -215,15 +215,18 @@ export type Award = { title: string; detail: string };
 export const awards: Award[] = [
   {
     title: "Telora",
-    detail: "A startup fellowship. I'm in it now.",
+    detail:
+      "A startup fellowship founded by a YC alum. They take under 1% of applicants. I'm in it now.",
   },
   {
     title: "Next Genius Scholarship",
-    detail: "A full scholarship to study at TCU.",
+    detail:
+      "A full scholarship to study at TCU. Around 6% of applicants get it.",
   },
   {
     title: "Regents Scholar, University of California",
-    detail: "I couldn't afford the rest of the cost, so I didn't go.",
+    detail:
+      "Awarded to the top 1–2% of applicants. I couldn't afford the rest of the cost, so I didn't go.",
   },
   {
     title: "TCU CREATE Accelerator",
